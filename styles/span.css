@@ -1,0 +1,36 @@
+body > span {
+    font-size: 28px;
+    width: 100%;
+    position: relative;
+    display: grid;
+    padding: 20px;
+    grid-template-columns: repeat(auto-fill, 20px);
+    gap: 2px;
+
+    div {
+        display: inline-flex;
+        height: 42px;
+        align-items: center;
+        justify-content: center;
+        background-color: #fafafa;
+        border: 1px solid #f8f8f8;
+        border-radius: 2px;
+        border-bottom: 4px solid #d4d4d4;
+
+        &[indicator] {
+            border-bottom-color: #425dbe7d;
+        }
+        &[success] {
+            border-bottom-color: #1e9876;
+        }
+        &[error] {
+            border-bottom-color: #d35;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    span {
+        max-width: 75%;
+    }
+}
